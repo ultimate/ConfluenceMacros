@@ -1,0 +1,69 @@
+## Macro title: Numbered Headings
+## Macro has a body: N
+## Body processing: -
+## Output: -
+##
+## Developed by: ultimate
+## Date created: 2022/06/01
+## Installed by: ultimate
+
+## @param AlignTOC:title=Align Table of Contents|type=boolean|required=true|desc=Normally the table of contents is indented hierarchical. Check this if you want the elements to be aligned for better readability. Note: you nead to enable "Display Section Numbering" in the table of content macro separately.
+<div class="numbered-headings">
+
+<style type="text/css">
+/* number the headlines only - the TOC can be numbered with a checkmar in the macro */
+	#content {
+        counter-reset: h1counter;
+    }
+    #content h1:before {
+        content: counter(h1counter) '\0000a0\0000a0';
+        counter-increment: h1counter;
+	}
+    #content h1 {
+        counter-reset: h2counter;
+    }
+    #content h2:before {
+        content: counter(h1counter) '.' counter(h2counter) '\0000a0\0000a0';
+        counter-increment: h2counter;
+	}
+    #content h2 {
+        counter-reset: h3counter;
+    }
+    #content h3:before {
+        content: counter(h1counter) '.' counter(h2counter) '.' counter(h3counter) '\0000a0\0000a0';
+        counter-increment: h3counter;
+	}
+    #content h3 {
+        counter-reset: h4counter;
+    }
+    #content h4:before {
+        content: counter(h1counter) '.' counter(h2counter) '.' counter(h3counter) '.' counter(h4counter) '\0000a0\0000a0';
+        counter-increment: h4counter;
+    }
+    #content h4 {
+        counter-reset: h5counter;
+    }
+    #content h5:before {
+        content: counter(h1counter) '.' counter(h2counter) '.' counter(h3counter) '.' counter(h4counter) '.' counter(h5counter) '\0000a0\0000a0';
+        counter-increment: h5counter;
+    }
+    #content h5 {
+        counter-reset: h6counter;
+    }
+    #content h6:before {
+        content: counter(h1counter) '.' counter(h2counter) '.' counter(h3counter) '.' counter(h4counter) '.' counter(h5counter) '.' counter(h6counter) '\0000a0\0000a0';
+        counter-increment: h6counter;
+    }
+</style>
+#if ($paramAlignTOC == true)
+<style type="text/css">
+/* align the table of contents */
+  .toc-macro {
+    margin-left: 40px;
+  }
+  .toc-macro ul {
+    margin-left: -40px;
+  }
+</style>
+#end
+</div>
