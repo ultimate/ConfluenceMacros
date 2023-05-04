@@ -1,0 +1,33 @@
+## Macro title: Color-Box
+## Macro has a body: Y
+## Body processing: rendered
+## Output: Selected output option
+##
+## Developed by: ultimate
+## Date created: 2022/05/31
+## Installed by: ultimate
+
+## @param Title:title=Title|type=string|required=false|desc=Enter a title (optional)
+## @param Color:title=Color|type=enum|enumValues=blue,cyan,green,yellow,orange,red,pink,purple,grey|default=blue|desc=Choose a color
+
+<ac:structured-macro ac:name="panel">
+  #if     ($paramColor=="blue")         #set ($borderColor="#0000FF")          #set ($backgroundColor="#EEEEFF")
+  #elseif ($paramColor=="cyan")         #set ($borderColor="#00BBBB")          #set ($backgroundColor="#DDFFFF")
+  #elseif ($paramColor=="green")        #set ($borderColor="#00BB00")          #set ($backgroundColor="#DDFFDD")
+  #elseif ($paramColor=="yellow")       #set ($borderColor="#EEEE00")          #set ($backgroundColor="#FFFFDD")
+  #elseif ($paramColor=="orange")       #set ($borderColor="#EEBB00")          #set ($backgroundColor="#FFEEDD")
+  #elseif ($paramColor=="red")          #set ($borderColor="#BB0000")          #set ($backgroundColor="#FFDDDD")
+  #elseif ($paramColor=="pink")         #set ($borderColor="#CC0099")          #set ($backgroundColor="#FFCCEE")
+  #elseif ($paramColor=="purple")       #set ($borderColor="#9900FF")          #set ($backgroundColor="#E3CCFF")
+  #elseif ($paramColor=="grey")         #set ($borderColor="#BBBBBB")          #set ($backgroundColor="#EEEEEE")
+  #end
+
+    <ac:parameter ac:name="title">$!paramTitle</ac:parameter>
+    <ac:parameter ac:name="titleColor">white</ac:parameter>
+    <ac:parameter ac:name="titleBGColor">$borderColor</ac:parameter>
+    <ac:parameter ac:name="borderColor">$borderColor</ac:parameter>
+    <ac:parameter ac:name="borderStyle">solid</ac:parameter>
+    <ac:parameter ac:name="borderWidth">2</ac:parameter>
+    <ac:parameter ac:name="bgColor">$backgroundColor</ac:parameter>
+    <ac:rich-text-body>$body</ac:rich-text-body>
+</ac:structured-macro>
