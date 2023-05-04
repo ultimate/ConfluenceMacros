@@ -1,0 +1,23 @@
+## Macro title: HTML-Pre
+## Macro has a body: Y
+## Body processing: rendered
+## Output: Selected output option
+##
+## Developed by: ultimate
+## Date created: 2022/09/22
+## Installed by: ultimate
+
+## @param Width:title=Width|type=string|desc=Limit the width of the block; must be set in px or %, e.g. "500px" or "50%"
+## @param Border:title=Border|type=boolean|required=true|desc=Display a border around the content?|default=true
+
+<div style="overflow-x:scroll; width:$paramWidth;"
+#if ($paramBorder == true)
+class="panel"
+#end
+>
+<div class="preformattedContent panelContent">
+<pre>
+$body
+</pre>
+</div>
+</div>
