@@ -22,6 +22,6 @@ Add numberings to the headings in the page
 ![numbered-headings](/numbered-headings.png)
 
 ### html-pre
-HTML-pre element with inner body. It's a very simple and limited alternative to the code-block macro, that it allows you to format/highlight parts of the code/content.
+HTML-pre element with inner body. It's a very simple and limited alternative to the code-block macro, that allows formatting parts of the code/content - e.g. if you want to past a log and highlight some sections...
 
 ![html-pre](/html-pre.png)
