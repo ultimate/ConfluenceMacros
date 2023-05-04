@@ -4,6 +4,11 @@ My collection of user macros for Atlassian Confluence
 ## License Information
 All of my code is free to use under MIT License.
 
+## General Information
+For infos on how to use these macros please refer to the Atlassian Confluence documentation:
+* https://confluence.atlassian.com/doc/writing-user-macros-4485.html
+* https://confluence.atlassian.com/doc/user-macro-template-syntax-223906130.html
+
 ## Macro Overview
 
 ### color-box
