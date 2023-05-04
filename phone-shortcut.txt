@@ -1,0 +1,12 @@
+## Macro title: Phone Shortcut
+## Macro has a body: Y
+## Body processing: rendered
+## Output: Selected output option
+##
+## Developed by: ultimate
+## Date created: 2022/09/21
+## Installed by: ultimate
+
+## @param Icon:title=Icon|type=enum|enumValues=📞,📱,📲,📟,📠,☎,☏,🕿,🕾,✆,📵|default=📞|desc=Choose an icon
+
+<a href="tel:$body">$paramIcon $body</a>
